@@ -17,3 +17,11 @@ describe ('Anagram#anagram_checker') do
     expect(antigram.anagram_checker).to(eq("These words have no letter matches and are antigrams."))
   end
 end
+
+describe('Anagram#check_vowels') do
+  it("checks if words have vowels") do
+    words = Anagram.new('tea', 'eat')
+    expect(words.check_vowels).to(eq(true))
+  end
+end
+    
