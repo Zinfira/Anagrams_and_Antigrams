@@ -11,8 +11,8 @@ class Anagram
   end
 
   def anagram_checker()
-    @word1 = word1.downcase.split('').sort
-    @word2 = word2.downcase.split('').sort
+    @word1 = word1.downcase.split('').sort.join
+    @word2 = word2.downcase.split('').sort.join
     if (@word1 == @word2) & (@word1.length == @word2.length)
       "These words are anagrams"
     else
@@ -27,4 +27,6 @@ class Anagram
       "You need to input actual words!"
     end
   end
+
+  
 end

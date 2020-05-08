@@ -30,6 +30,15 @@ describe ('Anagram#anagram_checker') do
     antigram = Anagram.new('hi', 'bye')
     expect(antigram.anagram_checker).to(eq("These words have no letter matches and are antigrams."))
   end
+
+  it("checks if multiple words are anagrams") do
+    anagram4 = Anagram.new('eleven plus two', 'twelve plus one')
+    # expect(anagram4.anagram_checker).to(eq("These words are anagrams"))
+    anagram4.remover
+    anagram4.anagram_checker
+    expect(anagram4.word1).to(eq('eeellnopstuvw'))
+    expect(anagram4.word2).to(eq('eeellnopstuvw'))
+  end
 end
 
 describe('Anagram#check_vowels') do
