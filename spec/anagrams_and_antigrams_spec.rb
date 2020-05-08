@@ -1,6 +1,15 @@
 require('rspec')
 require('anagrams_and_antigrams')
 
+describe('Anagram#remover') do
+  it("checks if spaces, numbers and punctiation do not count") do
+    anagram1 = Anagram.new('Statue of Liberty', 'Built to stay4 Free')
+    anagram1.remover
+    expect(anagram1.word1).to(eq('StatueofLiberty'))
+    expect(anagram1.word2).to(eq('BuilttostayFree'))
+  end
+end
+
 describe ('Anagram#anagram_checker') do
   it("checks if two words are anagrams and have same letters") do
     anagram = Anagram.new('ruby', 'bury')
@@ -21,14 +30,6 @@ describe ('Anagram#anagram_checker') do
     antigram = Anagram.new('hi', 'bye')
     expect(antigram.anagram_checker).to(eq("These words have no letter matches and are antigrams."))
   end
-
-  it("checks if spaces, numbers and punctiation do not count") do
-    anagram4 = Anagram.new()
-    anagram4.word1 = 'Statue of Liberty'
-    anagram4.word2 = 'Built to stay4 Free'
-    expect(anagram4.word1.anagram_checker).to(eq('statueofliberty'))
-    expect(anagram4.word2.anagram_checker).to(eq('builttostayfree'))
-  end
 end
 
 describe('Anagram#check_vowels') do
@@ -42,4 +43,6 @@ describe('Anagram#check_vowels') do
     expect(notwords.check_vowels).to(eq("You need to input actual words!"))
   end
 end
+
+
     

@@ -5,6 +5,11 @@ class Anagram
     @word2 = word2
   end
 
+  def remover()
+    @word1 = word1.gsub!(/[^abcdefghijklmnopqrstuvwxyz]/i, '')
+    @word2 = word2.gsub!(/[^abcdefghijklmnopqrstuvwxyz]/i, '')
+  end
+
   def anagram_checker()
     @word1 = word1.downcase.split('').sort
     @word2 = word2.downcase.split('').sort
