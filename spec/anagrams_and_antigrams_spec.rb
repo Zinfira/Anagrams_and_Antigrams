@@ -12,6 +12,11 @@ describe ('Anagram#anagram_checker') do
     expect(anagram2.anagram_checker).to(eq('These words are anagrams'))
   end
 
+  it("checks if two words have same length") do
+    anagram3 = Anagram.new('stressed', 'desserts')
+    expect(anagram3.anagram_checker).to(eq(8))
+  end
+
   it("checks if words are antigrams") do
     antigram = Anagram.new('hi', 'bye')
     expect(antigram.anagram_checker).to(eq("These words have no letter matches and are antigrams."))
