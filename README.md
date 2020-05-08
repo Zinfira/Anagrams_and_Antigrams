@@ -13,8 +13,9 @@ _This program will determine if two words are an anagram. Two words are anagrams
 |-------|---------------|----------------|
 | Checks if two words are anagrams | "ruby" "bury" | "These words are anagrams." |
 | Words have different cases | "Tea" "EaT" | "These words are anagrams." |
-
-
+| Words should contain vowels | "qwrt" | "You need to input actual words!" |
+| Checks if words are antigrams | "hi" "bye" | "These words have no letter matches and are antigrams." |
+| Checks if spaces, punctuation and numbers are removed and do not count | 'Built to stay4 Free' | 'BuilttostayFree' |
 
 ## Setup/Installation Requirements
 

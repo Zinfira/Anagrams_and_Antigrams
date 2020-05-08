@@ -5,6 +5,14 @@ class Anagram
     @word2 = word2
   end
 
+  def check_vowels()
+    if @word1.match?(/[aeiou]/) & @word2.match?(/[aeiou]/)
+      true
+    else
+      "You need to input actual words!"
+    end
+  end
+
   def remover()
     @word1 = word1.gsub!(/[^abcdefghijklmnopqrstuvwxyz]/i, '')
     @word2 = word2.gsub!(/[^abcdefghijklmnopqrstuvwxyz]/i, '')
@@ -20,13 +28,7 @@ class Anagram
     end
   end
 
-  def check_vowels()
-    if @word1.match?(/[aeiou]/) & @word2.match?(/[aeiou]/)
-      true
-    else
-      "You need to input actual words!"
-    end
-  end
+  
 
   
 end
