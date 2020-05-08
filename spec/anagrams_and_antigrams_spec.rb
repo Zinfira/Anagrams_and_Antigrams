@@ -53,12 +53,12 @@ describe('Anagram#check_vowels') do
   end
 end
 
-describe('#anagram_checker') do
-  it("#check if it is not anagrams how many letters are matched") do
-    words = Anagram.new('cat', 'batty')
-    expect(words.anagram_checker).to(eq('at'))
-  end
-end
+# describe('#anagram_checker') do
+#   it("#check if it is not anagrams how many letters are matched") do
+#     words = Anagram.new('cat', 'batty')
+#     expect(words.check_antigram).to(eq('2'))
+#   end
+# end
 
 
     

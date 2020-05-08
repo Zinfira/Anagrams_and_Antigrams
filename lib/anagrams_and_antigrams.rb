@@ -27,8 +27,4 @@ class Anagram
       "These words have no letter matches and are antigrams."
     end
   end
-
-  
-
-  
 end
