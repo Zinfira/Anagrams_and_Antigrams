@@ -10,6 +10,8 @@ class Anagram
     @word2 = word2.downcase.split('').sort
     if @word1 == @word2
       "These words are anagrams"
+    else
+      "These words have no letter matches and are antigrams."
     end
   end
 end
