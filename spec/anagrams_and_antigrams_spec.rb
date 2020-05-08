@@ -23,5 +23,10 @@ describe('Anagram#check_vowels') do
     words = Anagram.new('tea', 'eat')
     expect(words.check_vowels).to(eq(true))
   end
+
+  it('checks if it does not have vowels') do
+    notwords = Anagram.new('qwrt', 'wqtr')
+    expect(notwords.check_vowels).to(eq("You need to input actual words!"))
+  end
 end
     
