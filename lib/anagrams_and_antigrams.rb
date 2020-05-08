@@ -14,4 +14,10 @@ class Anagram
       "These words have no letter matches and are antigrams."
     end
   end
+
+  def check_vowels()
+    if @word1.match?(/[aeiou]/) & @word2.match?(/[aeiou]/)
+      true
+    end
+  end
 end
