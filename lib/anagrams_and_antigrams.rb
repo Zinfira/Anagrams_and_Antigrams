@@ -6,8 +6,8 @@ class Anagram
   end
 
   def anagram_checker()
-    @word1 = word1.split('').sort
-    @word2 = word2.split('').sort
+    @word1 = word1.downcase.split('').sort
+    @word2 = word2.downcase.split('').sort
     if @word1 == @word2
       "These words are anagrams"
     end
