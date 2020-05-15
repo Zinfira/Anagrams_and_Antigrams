@@ -9,7 +9,7 @@ class Anagram
     if @word1.match?(/[aeiou]/) & @word2.match?(/[aeiou]/)
       true
     else
-      "You need to input actual words!"
+      false
     end
   end
 
