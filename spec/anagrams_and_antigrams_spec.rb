@@ -45,13 +45,6 @@ describe('Anagram#check_vowels') do
   end
 end
 
-# describe('#anagram_checker') do
-#   it("#check if it is not anagrams how many letters are matched") do
-#     words = Anagram.new('cat', 'batty')
-#     expect(words.check_antigram).to(eq('2'))
-#   end
-# end
-
 describe('Anagram#remover') do
   it("checks if spaces, numbers and punctiation do not count") do
     anagram1 = Anagram.new('Statue of Liberty', 'Built to stay4 Free')
@@ -61,4 +54,16 @@ describe('Anagram#remover') do
   end
 end
 
+describe('Anagram#check_match') do
+  it("checks if words have matched letter but not anagrams") do
+    words = Anagram.new("cat", "batty")
+    expect(words.letters_matched).to(eq(["a", "t"]))
+  end
+end
     
+describe('Anagram#anagram_checker') do
+  it("check if it is not anagrams how many letters are matched") do
+    words = Anagram.new("cat", "batty")
+    expect(words.anagram_checker).to(eq("These words aren't anagrams but 2 letters match: a, t"))
+  end
+end
