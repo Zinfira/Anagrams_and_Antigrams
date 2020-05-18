@@ -66,4 +66,9 @@ describe('Anagram#anagram_checker') do
     words = Anagram.new("cat", "batty")
     expect(words.anagram_checker).to(eq("These words aren't anagrams but 2 letters match: a, t"))
   end
+
+  it("checks if word does not have vowels") do
+    notwords = Anagram.new("btw!", "lmk")
+    expect(notwords.anagram_checker).to(eq("You need to input actual words!"))
+  end
 end

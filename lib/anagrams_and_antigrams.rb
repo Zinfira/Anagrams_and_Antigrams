@@ -19,15 +19,19 @@ class Anagram
   end
 
   def anagram_checker()
-    @word1 = word1.downcase.split('').sort.join
-    @word2 = word2.downcase.split('').sort.join
-    if (@word1 == @word2) & (@word1.length == @word2.length)
-      "These words are anagrams"
-    elsif letters_matched.any?
-      letters_matched_show = letters_matched.join(", ")
-      "These words aren't anagrams but #{letters_matched.length} letters match: #{letters_matched_show}"
+    if check_vowels == false
+      "You need to input actual words!"
     else
-      "These words have no letter matches and are antigrams."
+      @word1 = word1.downcase.split('').sort.join
+      @word2 = word2.downcase.split('').sort.join
+      if (@word1 == @word2) & (@word1.length == @word2.length)
+        "These words are anagrams"
+      elsif letters_matched.any?
+        letters_matched_show = letters_matched.join(", ")
+        "These words aren't anagrams but #{letters_matched.length} letters match: #{letters_matched_show}"
+      else
+        "These words have no letter matches and are antigrams."
+      end
     end
   end
 
